@@ -267,14 +267,14 @@ export default function transform ( code, id, isEntry, ignoreGlobal, customNamed
 
 				if ( flattened.keypath === 'module.exports' ) {
 					hasDefaultExport = true;
-					magicString.overwrite( node.start, right.start, `var ${moduleName} = ` );
+					magicString.overwrite( node.start, right.start - 1, `var ${moduleName} = ` );
 				} else {
 					const name = match[1];
 					const deconflicted = deconflict( scope, globals, name );
 
 					names.push({ name, deconflicted });
 
-					magicString.overwrite( node.start, right.start, `var ${deconflicted} = ` );
+					magicString.overwrite( node.start, right.start - 1, `var ${deconflicted} = ` );
 
 					const declaration = name === deconflicted ?
 						`export { ${name} };` :

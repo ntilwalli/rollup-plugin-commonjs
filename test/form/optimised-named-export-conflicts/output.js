@@ -1,8 +1,8 @@
 var foo = 1;
 var bar = 2;
 
-var foo_1 = 'a';
-var bar_1 = 'b';
+var foo_1 =  'a';
+var bar_1 =  'b';
 
 var input = {
 	foo: foo_1,

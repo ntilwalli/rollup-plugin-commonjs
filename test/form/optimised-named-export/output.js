@@ -1,5 +1,5 @@
-var foo = 'a';
-var bar = 'b';
+var foo =  'a';
+var bar =  'b';
 
 var input = {
 	foo: foo,
